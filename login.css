@@ -1,0 +1,138 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.leftside {
+    background: url('assets/login_page_imgs/lady_photograph.png') lightgray 100% / cover no-repeat;
+    display: block;
+    width: 70%;
+    height: 100vh;
+    position: relative;
+}
+
+.zotineraryBox {
+    border-radius: 10px;
+    background: #0064A4;
+    width: 50%;
+    height: 25%;
+    flex-shrink: 0;
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    color: #FFD200;
+    font-family: Kadwa;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 0%
+}
+
+h2 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 0%
+}
+
+h3 {
+    color: #000;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.rightside {
+    background-color: #fff;
+    display: block;
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.continueWithBox-Facebook {
+    display: flex;
+    width: 345px;
+    height: 54px;
+    padding: 0px 21.5px 0px 22.5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #1877F2;
+}
+
+.continueWithBox-Google {
+    display: flex;
+    width: 345px;
+    height: 54px;
+    padding: 0px 21.5px 0px 22.5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.17);
+}
+
+.continueWithBox-Apple {
+    display: flex;
+    width: 345px;
+    height: 54px;
+    padding: 0px 21.5px 0px 22.5px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.17);
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
