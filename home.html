@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <button id="sidebar-btn" onclick="toggleSidebar()">Sidebar</button>
+
+    <div id="sidebar" class="sidebar">
+        <h1>My Itinerary</h1>
+
+        <div class="date-boxes">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date">
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date">
+        </div>
+
+        <div>
+            <h2>Destination</h2>
+            <button onclick="openPopup('stop')">+ Add Stop</button>
+            <hr>
+        </div>
+
+        <div>
+            <h2>Flight</h2>
+            <button onclick="openPopup('flight')">+ Add Flight</button>
+            <hr>
+        </div>
+
+        <div>
+
+            <h2>Transportation</h2>
+            <button onclick="openPopup('vehicle')">+ Add Rental Vehicle</button>
+            <hr>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content" id="popup-stop" style="display: none;">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Add Stop Popup</h2>
+        </div>
+
+        <div class="popup-content" id="popup-flight" style="display: none;">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Add Flight Popup</h2>
+        </div>
+
+        <div class="popup-content" id="popup-vehicle" style="display: none;">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Add Rental Vehicle Popup</h2>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+
+</html>
