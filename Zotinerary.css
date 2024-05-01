@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-size: 28px;
+    font-family: "Kadwa", serif;
+}
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #1b3d6d;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 5px 12px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.navbar .search-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-right: 10px;
+}
+.navbar input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    width:70%;
+}
+.navbar .Zotinerary{
+    font-family: "Kadwa", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50;
+    color: #ffd200;
+    margin: 0;
+    float:left;
+    padding-left:10px;
+}
+.navbar .Buttons{
+    display:flex;
+    float:right;
+}
+.Alt-Button{
+    font-family: "Kadwa", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-color: transparent;
+    border: solid white;
+    margin-right:15px;
+}
+.Main-Button{
+    font-family: "Kadwa", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ffd200;
+    border: solid #ffd200;
+    border-radius: 5px;
+    color: #1b3d6d;
+    margin-right:10px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
