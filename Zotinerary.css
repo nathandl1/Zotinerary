@@ -3,6 +3,61 @@ body {
     font-size: 28px;
     font-family: "Kadwa", serif;
 }
+.content{
+    background-color: #F3F0F0;
+}
+.Main-Content{
+    background-color: #ffffff;
+    width: 80%;
+    height: 100vh;
+    margin:auto;
+}
+.Profile{
+    display:flex;
+    padding: 5%;
+    font-family: "Kadwa", serif;
+}
+.ProfileInfo{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.ProfileInfo #Username{
+    font-weight:700;
+}
+.ProfileStats{
+    display:flex;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+.ProfileStats h1{
+    margin-left: 3%;
+    margin-right: 5%;
+}
+.ProfilePic{
+    border-radius: 10%;
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.line {
+    width: 80%; 
+    height: 1px;
+    background-color: black;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.Posttype{
+    display:flex;
+    justify-content: center;
+}
+.Posttype h1{
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
 .header {
     background-color: #f1f1f1;
     padding: 30px;
