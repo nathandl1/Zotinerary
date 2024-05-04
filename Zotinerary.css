@@ -3,6 +3,61 @@ body {
     font-size: 28px;
     font-family: "Kadwa", serif;
 }
+.content{
+    background-color: #F3F0F0;
+}
+.Main-Content{
+    background-color: #ffffff;
+    width: 80%;
+    height: 100vh;
+    margin:auto;
+}
+.Profile{
+    display:flex;
+    padding: 5%;
+    font-family: "Kadwa", serif;
+}
+.ProfileInfo{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.ProfileInfo #Username{
+    font-weight:700;
+}
+.ProfileStats{
+    display:flex;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+.ProfileStats h1{
+    margin-left: 3%;
+    margin-right: 5%;
+}
+.ProfilePic{
+    border-radius: 10%;
+    width: 30%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.line {
+    width: 80%; 
+    height: 1px;
+    background-color: black;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.Posttype{
+    display:flex;
+    justify-content: center;
+}
+.Posttype h1{
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
 .header {
     background-color: #f1f1f1;
     padding: 30px;
@@ -82,4 +137,63 @@ body {
 }
 .sticky + .content {
     padding-top: 60px;
+}
+div.posts {
+    position:relative;
+    top:2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: 250px;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  div.title{
+    padding:10px;
+    text-align: left;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    padding-bottom: 10px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
