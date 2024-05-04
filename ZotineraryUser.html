@@ -20,9 +20,39 @@
         </div>
         <div class = "Buttons">
             <a class = "Alt-Button" href = "MyProfile.html"> My Profile</a>
-            <a class = "Main-Button" href = "CreateItinerary.html"> Create Itinerary</a>
+            <a class = "Main-Button" onclick="toggleSidebar()"> Create Itinerary</a>
         </div>
     </div> 
+    <div id="sidebar" class="sidebar">
+        <h1>My Itinerary</h1>
+
+        <div class="date-boxes">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date">
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date">
+        </div>
+
+        <div>
+            <h2>Destination</h2>
+            <button onclick="openPopup('stop')">+ Add Stop</button>
+            <hr>
+        </div>
+
+        <div>
+            <h2>Flight</h2>
+            <button onclick="openPopup('flight')">+ Add Flight</button>
+            <hr>
+        </div>
+
+        <div>
+
+            <h2>Transportation</h2>
+            <button onclick="openPopup('vehicle')">+ Add Rental Vehicle</button>
+            <hr>
+        </div>
+    </div>
     <div class = "Main-Content">
         <div class="posts">
             <div class="responsive">

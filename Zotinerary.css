@@ -198,3 +198,57 @@ div.gallery {
     display: table;
     clear: both;
 }
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background: var(--M3-sys-light-surface, #FEF7FF);
+    padding: 20px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.05);
+    z-index: 3;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+#sidebar-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.sidebar h1 {
+    color: var(--M3-sys-light-on-surface-variant, #49454F);
+    font-family: 'Kadwa';
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 52px;
+}
+
+.sidebar h2 {
+    width: 258px;
+    height: 40px;
+    color: #000;
+    font-family: 'Kadwa';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sidebar h3 {
+    color: var(--M3-sys-light-on-surface, #1D1B20);
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
