@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home Page</title>
     <link rel="stylesheet" href="home.css">
+    <script defer src="home.js"></script>
 </head>
 
 <body>
@@ -24,38 +26,39 @@
 
         <div>
             <h2>Destination</h2>
-            <button onclick="openPopup('stop')">+ Add Stop</button>
+            <button data-modal-target="#modal">+ Add Stop</button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="title">Add Stop</div>
+                    <button class="add-button">+</button>
+                    <button data-close-button class="close-button">Cancel</button>
+                </div>
+                <div class="modal-body">
+                    <div class="destination-box"></div>
+                    <div class="date-container">
+                        <div class="date-box"></div>
+                        <div class="date-box"></div>
+                    </div>
+                    <div class="filter-boxes">
+                        <div class="filter-box"></div>
+                        <div class="filter-box"></div>
+                    </div>
+                    <div class="info-box"></div>
+                </div>
+            </div>
+            <div id="overlay"></div>
             <hr>
         </div>
 
         <div>
             <h2>Flight</h2>
-            <button onclick="openPopup('flight')">+ Add Flight</button>
             <hr>
         </div>
 
         <div>
 
             <h2>Transportation</h2>
-            <button onclick="openPopup('vehicle')">+ Add Rental Vehicle</button>
             <hr>
-        </div>
-    </div>
-
-    <div id="popup" class="popup">
-        <div class="popup-content" id="popup-stop" style="display: none;">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2>Add Stop Popup</h2>
-        </div>
-
-        <div class="popup-content" id="popup-flight" style="display: none;">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2>Add Flight Popup</h2>
-        </div>
-
-        <div class="popup-content" id="popup-vehicle" style="display: none;">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2>Add Rental Vehicle Popup</h2>
         </div>
     </div>
 
