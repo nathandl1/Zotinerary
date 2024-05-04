@@ -1,0 +1,239 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftside {
+    background: url('assets/login_page_imgs/lady_photograph.png') lightgray 100% / cover no-repeat;
+    background-position: center;
+    width: 70%;
+    position: relative;
+    display: flex;
+}
+
+.zotineraryBox {
+    border-radius: 10px;
+    background: #0064A4;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    flex-shrink: 0;
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.zotineraryBox h1 {
+    color: #FFD200;
+    font-family: 'Kadwa';
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 0%
+}
+
+.zotineraryBox h2 {
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 0%
+}
+
+.rightside {
+    background-color: #fff;
+    width: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightside h1 {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.continueWithButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 54px;
+    padding: 0px 21.5px 0px 22.5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08), 0px 2px 3px 0px rgba(0, 0, 0, 0.17);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.continueWithButton img {
+    margin-right: 10px;
+}
+
+.continueWithButton p {
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.google {
+    background: #FFF;
+}
+
+.google p {
+    color: #000;
+}
+
+.apple {
+    background: #000;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Inter';
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+    }
+
+    .leftside {
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .zotineraryBox {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .zotineraryBox h1 {
+        font-size: 40px;
+    }
+
+    .zotineraryBox h2 {
+        font-size: 20px;
+    }
+
+    .rightside {
+        width: 50%;
+        z-index: 2;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .rightside h1 {
+        font-size: 30px;
+    }
+
+    .continueWithButton img {
+        width: 15%;
+    }
+
+    .continueWithButton p {
+        font-size: 8px;
+    }
+
+    .error-message {
+        font-size: 12px;
+    }
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kadwa';
+    src: url('assets/fonts/Kadwa/Kadwa-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kadwa';
+    src: url('assets/fonts/Kadwa/Kadwa-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter/Inter-ExtraBold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
