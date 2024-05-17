@@ -1,13 +1,12 @@
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import Search from '@/app/ui/search';
-import Image from 'next/image';
-import DisplayCard from './components/display-card';
 export default function Page() {
   return (
     <main className={styles.body}>
       <div className={styles.navbar}>
-        <a className={`font-bold font-normal text-yellow-400 m-0 float-left pl-5 text-lg sm:text-2xl md:text-4xl md:leading-normal`}>Zotinerary</a>
+        <a className={`font-bold text-yellow-400 m-0 float-left pl-5 text-lg sm:text-2xl md:text-4xl md:leading-normal`}>Zotinerary</a>
         <div className="hidden flex-grow flex justify-center items-center p-2 sm:flex">
           <div className="relative" style = {{minWidth: '50%'}}>
             <Search placeholder="Search" />
@@ -26,40 +25,13 @@ export default function Page() {
           </Link>
         </div>
       </div>
-
       <div className="flex-grow flex justify-center items-center sm:hidden">
         <div className="relative" style = {{minWidth: '100%'}}>
           <Search placeholder="Search" />
         </div>
       </div>
-
-      <div className = "position:relative bg-[#F3F0F0] md:flex">
+      <div className = "hidden bg-[#F3F0F0] md:flex">
         <div className = {styles.MainContent}>
-          {/* Body of Page Here */}
-          <DisplayCard 
-            name={"Aaron Thai"} 
-            src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMp2QN2WCx7VRAXuJme-AcdxJJeXRSM3obFhXX_uIKvQ&s'} 
-            url={'https://www.facebook.com/naturalimagefacts/'} 
-            desc={'Great Vacation!'} 
-          />
-          <DisplayCard 
-            name={"Nathan Le"} 
-            src={'https://cdn.aarp.net/content/dam/aarp/travel/Domestic/2021/12/1140-oahu-hero.jpg'} 
-            url={undefined} 
-            desc={"Would go again!"} 
-          />
-          <DisplayCard 
-            name={"Cat Luvr"} 
-            src={'https://www.ocregister.com/wp-content/uploads/2018/01/0120_nws_cur-l-cm-02.jpg?w=650'} 
-            url={undefined} 
-            desc={"Mao?"} 
-          />
-          <DisplayCard 
-            name={"Tree Hugger"} 
-            src={'https://www.treesatlanta.org/wp-content/uploads/2018/06/Oldest-Tree.jpg'} 
-            url={undefined} 
-            desc={"Tree"} 
-          />
         </div>
       </div>
     </main>

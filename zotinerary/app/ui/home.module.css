@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: auto;
+    z-index: 2;
     height:5%;
 }
 .AltButton{
@@ -29,18 +29,37 @@
     margin-right:10px;
 }
 .MainContent{
-    background-color: #ffffff;
+    background-color:white;
     width: 80%;
     height: 100vh;
     margin:auto;
-    z-index: auto;
+    display:absolute;
 }
-
-.bgimg{
-    object-fit: cover;
-    z-index: 1;
+.Profile{
+    display:flex;
+    padding: 5%;
+    padding-bottom: 2%;
+    padding-right:1%
 }
-
-.background{
-    position:fixed;
+.ProfileInfo{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.content{
+    background-color: #F3F0F0;
+}
+.ProfilePic{
+    border-radius: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.line {
+    width: 80%; 
+    height: 2px;
+    background-color: black;
+    margin: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }

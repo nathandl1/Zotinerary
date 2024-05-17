@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <main className={styles.body}>
       <div className={styles.navbar}>
-        <a className={`font-bold font-normal text-yellow-400 m-0 float-left pl-5 text-lg sm:text-2xl md:text-4xl md:leading-normal`}>Zotinerary</a>
+        <a className={`font-bold text-yellow-400 m-0 float-left pl-5 text-lg sm:text-2xl md:text-4xl md:leading-normal`}>Zotinerary</a>
         <div className="hidden flex-grow flex justify-center items-center p-2 sm:flex">
           <div className="relative" style = {{minWidth: '50%'}}>
             <Search placeholder="Search" />
