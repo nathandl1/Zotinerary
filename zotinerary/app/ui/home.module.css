@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: auto;
     height:5%;
 }
 .AltButton{
@@ -33,5 +33,14 @@
     width: 80%;
     height: 100vh;
     margin:auto;
-    z-index: 0;
+    z-index: auto;
+}
+
+.bgimg{
+    object-fit: cover;
+    z-index: 1;
+}
+
+.background{
+    position:fixed;
 }

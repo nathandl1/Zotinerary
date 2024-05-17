@@ -37,3 +37,12 @@ export default function Page() {
     </main>
   );
 }
+
+/*
+<Image
+            src="/lady_photograph.png"
+            fill
+            alt="Picture of the author"
+            className='bg-img'
+          />
+          */
