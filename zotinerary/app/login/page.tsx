@@ -10,7 +10,7 @@ export default function Login() {
             <Image 
                 src={'/lady_photograph.png'} 
                 alt={''}
-                width={1200}
+                width={2000}
                 height={1920}
                 className='z-0'
             />
