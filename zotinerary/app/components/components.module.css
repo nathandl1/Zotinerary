@@ -2,7 +2,9 @@
     padding: 0 6px;
     float: left;
     width: 24.99999%;
+    height: 24.9999%;
     padding-bottom: 10px;
+    padding-top:10px;
   }
 
 div.gallery {
@@ -16,13 +18,15 @@ div.gallery:hover {
 div.gallery img {
     width: 100%;
     height: 250px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 div.title{
     padding:5px;
     text-align: left;
-    font-size: 2vw;
-    height: 50px;
+    font-size: 1vw;
+    height: 5w;
 }
 
 div.desc {

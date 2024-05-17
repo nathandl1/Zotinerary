@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import Search from '@/app/ui/search';
+import cardList from "./data"
 import Image from 'next/image';
-import DisplayCard from './components/display-card';
 export default function Page() {
   return (
     <main className={styles.body}>
       <div className={styles.navbar}>
-        <a className={`font-bold font-normal text-yellow-400 m-0 float-left pl-5 text-lg sm:text-2xl md:text-4xl md:leading-normal`}>Zotinerary</a>
+        <a className={`font-bold text-yellow-400 m-0 float-left pl-5 text-lg sm:text-2xl md:text-4xl md:leading-normal`}>Zotinerary</a>
         <div className="hidden flex-grow flex justify-center items-center p-2 sm:flex">
           <div className="relative" style = {{minWidth: '50%'}}>
             <Search placeholder="Search" />
@@ -26,40 +26,59 @@ export default function Page() {
           </Link>
         </div>
       </div>
-
       <div className="flex-grow flex justify-center items-center sm:hidden">
         <div className="relative" style = {{minWidth: '100%'}}>
           <Search placeholder="Search" />
         </div>
       </div>
-
-      <div className = "position:relative bg-[#F3F0F0] md:flex">
+      <div className = "hidden md:flex h-lvh bg-[#2e3035]">
         <div className = {styles.MainContent}>
-          {/* Body of Page Here */}
-          <DisplayCard 
-            name={"Anonymous"} 
-            src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMp2QN2WCx7VRAXuJme-AcdxJJeXRSM3obFhXX_uIKvQ&s'} 
-            url={'https://www.facebook.com/naturalimagefacts/'} 
-            desc={'Great Vacation!'} 
-          />
-          <DisplayCard 
-            name={"Anonymous"} 
-            src={'https://cdn.aarp.net/content/dam/aarp/travel/Domestic/2021/12/1140-oahu-hero.jpg'} 
-            url={undefined} 
-            desc={"Would go again!"} 
-          />
-          <DisplayCard 
-            name={"Anonymous"} 
-            src={'https://www.ocregister.com/wp-content/uploads/2018/01/0120_nws_cur-l-cm-02.jpg?w=650'} 
-            url={undefined} 
-            desc={"Mao?"} 
-          />
-          <DisplayCard 
-            name={"Anonymous"} 
-            src={'https://www.treesatlanta.org/wp-content/uploads/2018/06/Oldest-Tree.jpg'} 
-            url={undefined} 
-            desc={"Tree"} 
-          />
+          <div className = "grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5 mx-5">
+            {cardList.map(card => (
+              <div className = 'shadow-lg border rounded-lg bg-white hover:opacity-80'>
+                <h3 className = "text-lg font-bold pl-2 py-1">{card.username}</h3>
+                <img src = {card.img}/>
+                <p className = "text-lg px-3">{card.title}</p>
+                <p className = "text-base px-8">{card.time}</p>
+                <div className = "flex px-2 pt-3">
+                  <div className = "flex-none">
+                    <Image width = {30} height = {30} src = "/like.png" alt = "Like Icon" className = "flex-none"></Image>
+                  </div>
+                  <p className = {styles.cardtext}>{card.likes}</p>
+                  <div className = "flex flex-grow justify-end">
+                    <div className = "flex-none">
+                      <Image width = {30} height = {30} src = "/comment.webp" alt = "Like Icon" className = "flex-none"></Image>
+                    </div>
+                    <p className = {styles.cardtext}>{card.comments}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className = "md:hidden">
+        <div className = "grid sm:grid-cols-2 gap-3 mt-5 mx-5">
+          {cardList.map(card => (
+            <div className = 'shadow-lg border rounded-lg bg-white'>
+              <h3 className = "text-lg font-bold pl-2 py-1">{card.username}</h3>
+              <img src = {card.img}/>
+              <p className = "text-lg px-3">{card.title}</p>
+              <p className = "text-base px-8">{card.time}</p>
+              <div className = "flex px-2 pt-3">
+              <div className = "flex-none">
+                <Image width = {30} height = {30} src = "/like.png" alt = "Like Icon" className = "flex-none"></Image>
+              </div>
+              <p className = {styles.cardtext}>{card.likes}</p>
+              <div className = "flex flex-grow justify-end">
+                <div className = "flex-none">
+                  <Image width = {30} height = {30} src = "/comment.webp" alt = "Like Icon" className = "flex-none"></Image>
+                </div>
+                <p className = {styles.cardtext}>{card.comments}</p>
+              </div>
+            </div>
+          </div>
+          ))}
         </div>
       </div>
     </main>
