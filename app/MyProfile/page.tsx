@@ -49,7 +49,7 @@ export default function Page() {
         </div>
         <div>
           <h1> Destinations</h1>
-          <Link href="/Destination"> 
+          <Link href="https://www.yelp.com/"> 
             <span className = "text-lg">
               + Add Stop
             </span>
@@ -67,7 +67,7 @@ export default function Page() {
         </div>
         <div>
           <h1> Cruises</h1>
-          <Link href="/Cruises" > 
+          <Link href="/https://www.cruises.com/" > 
             <span className = "text-lg">
               + Add Cruise
             </span>
@@ -76,7 +76,7 @@ export default function Page() {
         </div>
         <div>
           <h1> Rental Vehicles</h1>
-          <Link href="/Rentals" > 
+          <Link href="https://www.expedia.com/Car-Rentals-In-Rowland-Heights.d9646.Car-Rental-Guide" > 
             <span className = "text-lg">
               + Add Rental
             </span>
