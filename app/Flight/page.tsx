@@ -90,7 +90,7 @@ export default function Flights() {
                   <br/>
               </div>
               <table className='border-2 border-black m-auto' style={{ width: '70vw' }}>
-                  <tr className='border-2 border-black'>
+                  <tr className='border-2 border-black text-sm md:text-lg'>
                       <th>Airline</th>
                       <th>Date</th>
                       <th>Departure</th>
@@ -132,6 +132,57 @@ export default function Flights() {
                   />
               </table>
           </div>
+      </div>
+      <div className='md:hidden'>
+        <div>
+            <h1 className='text-center'>Search For Flights!</h1>
+            <div className="relative m-auto" style = {{maxWidth: '90%'}}>
+              <Search placeholder="Search" />
+            </div>
+            <br/>
+        </div>
+        <table className='border-2 border-black m-auto' style={{ width: '70vw' }}>
+            <tr className='border-2 border-black text-sm md:text-lg'>
+                <th>Airline</th>
+                <th>Date</th>
+                <th>Departure</th>
+                <th>Destination</th>
+                <th>Time</th>
+                <th>Link</th>
+            </tr>
+            <FlightRow 
+                airline={'American'} 
+                date={'5/29/2024'} 
+                departure={'SNA'} 
+                destination={'JFK'} 
+                time={'0500'} 
+                link={''}
+            />
+            <FlightRow 
+                airline={'Spirit'} 
+                date={'5/29/2024'} 
+                departure={'LAX'} 
+                destination={'SNA'} 
+                time={'0500'} 
+                link={''}
+            />
+            <FlightRow 
+                airline={'SouthWest'} 
+                date={'5/30/2024'} 
+                departure={'SNA'} 
+                destination={'JFK'} 
+                time={'1200'} 
+                link={''}
+            />
+            <FlightRow 
+                airline={'Hawaiian'} 
+                date={'5/31/2024'} 
+                departure={'LAX'} 
+                destination={'HNL'} 
+                time={'1700'} 
+                link={''}
+            />
+        </table>
       </div>
     </main>
   );
