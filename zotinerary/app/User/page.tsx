@@ -1,10 +1,16 @@
-
+'use client'
 import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import Search from '@/app/ui/search';
 import cardList from "@/app/data"
 import Image from 'next/image';
+import { useState } from 'react';
 export default function Page() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const handleItinerary = ()=>{
+    setMenuOpen(!menuOpen);
+    console.log(menuOpen);
+  }
   return (
     <main className={styles.body}>
       <div className={styles.navbar}>
@@ -15,24 +21,36 @@ export default function Page() {
           </div>
         </div>
         <div className="flex flex-wrap items-center justify-end">
-          <Link href="/MyProfile">
-            <span className={`text-white m-1 text-sm sm:text-base md:text-xl md:leading-normal border-2 border-white px-1 py-1`}>
-              My Profile
-            </span>
-          </Link>
-          <Link href="/Itinerary"> 
-            <span className={`font-bold bg-yellow-400 text-[#1b3d6d] m-1 text-sm sm:text-base md:text-xl md:leading-normal border-2 border-yellow-400 px-1 py-1`}>
-              Create Itinerary
-            </span>
-          </Link>
+          <div className={`text-white m-1 text-sm sm:text-base md:text-xl md:leading-normal border-2 border-white px-1 hover:opacity-80`}>
+            <Link href="/MyProfile">
+              <span>
+                My Profile
+              </span>
+            </Link>
+          </div>
+          <div onClick={handleItinerary} className = "hidden md:flex font-bold bg-yellow-400 text-[#1b3d6d] m-1 text-sm sm:text-base md:text-xl md:leading-normal border-2 border-yellow-400 px-1 hover:opacity-80">
+            My Itinerary
+          </div>
+          <div className={`md:hidden font-bold bg-yellow-400 text-[#1b3d6d] m-1 text-sm sm:text-base md:text-xl md:leading-normal border-2 border-yellow-400 px-1 hover:opacity-80`}>
+            <Link href="/Itinerary"> 
+              <span>
+                My Itinerary
+              </span>
+            </Link>
+          </div>
         </div>
+      </div>
+      <div className={menuOpen ? styles.sidemenu : "hidden"}>
+        <h1> Destinations</h1>
+        <h2> Flights</h2>
+        <h1> Cruises</h1>
+        <h1> Rental Vehicles</h1>
       </div>
       <div className="flex-grow flex justify-center items-center sm:hidden">
         <div className="relative" style = {{minWidth: '100%'}}>
           <Search placeholder="Search" />
         </div>
       </div>
-
       <div className = "hidden md:flex h-lvh bg-[#2e3035]">
         <div className = {styles.MainContent}>
           <div className = "grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5 mx-5">
