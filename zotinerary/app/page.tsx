@@ -21,7 +21,7 @@ export default function Page() {
               </span>
             </Link>
           </div>
-          <div className={`md:hidden font-bold bg-yellow-400 text-[#1b3d6d] m-1 text-sm sm:text-base md:text-xl md:leading-normal border-2 border-yellow-400 px-1 hover:opacity-80`}>
+          <div className={`font-bold bg-yellow-400 text-[#1b3d6d] m-1 text-sm sm:text-base md:text-xl md:leading-normal border-2 border-yellow-400 px-1 hover:opacity-80`}>
             <Link href="/Signup"> 
               <span>
                 Sign Up

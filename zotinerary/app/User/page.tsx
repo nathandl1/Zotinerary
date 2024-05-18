@@ -91,7 +91,7 @@ export default function Page() {
       </div>
       <div className = "hidden md:flex h-lvh bg-[#2e3035]">
         <div className = {styles.MainContent}>
-          <div className = "grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5 mx-5">
+          <div className = "grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6 mx-5">
             {cardList.map(card => (
               <div className = 'shadow-lg border rounded-lg bg-white hover:opacity-80'>
                 <h3 className = "text-lg font-bold pl-2 py-1">{card.username}</h3>
@@ -116,7 +116,7 @@ export default function Page() {
         </div>
       </div>
       <div className = "md:hidden">
-        <div className = "grid sm:grid-cols-2 gap-3 mt-5 mx-5">
+        <div className = "grid sm:grid-cols-2 sm:pt-12 gap-3 pt-4 mx-5">
           {cardList.map(card => (
             <div className = 'shadow-lg border rounded-lg bg-white'>
               <h3 className = "text-lg font-bold pl-2 py-1">{card.username}</h3>

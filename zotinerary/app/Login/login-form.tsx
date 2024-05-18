@@ -26,11 +26,11 @@ export default function LoginForm() {
             name='password'
             className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
           />
-          <Link href = "/User" className = "flex justify-center bg-blue-500 text-white rounded-md px-4 py-2 mt-4 hover:bg-blue-600">
+          <div className = "flex justify-center bg-blue-500 text-white rounded-md px-4 py-2 mt-4 hover:bg-blue-600">
             <button 
             type="submit"
             >Login</button>
-          </Link>
+          </div>
         </form>
       )
 }
