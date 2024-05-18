@@ -5,6 +5,8 @@ import Search from '@/app/ui/search';
 import cardList from "@/app/data"
 import Image from 'next/image';
 import { useState } from 'react';
+import Datetime from 'react-datetime';
+import "react-datetime/css/react-datetime.css";
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
   const handleItinerary = ()=>{
@@ -41,10 +43,46 @@ export default function Page() {
         </div>
       </div>
       <div className={menuOpen ? styles.sidemenu : "hidden"}>
-        <h1> Destinations</h1>
-        <h2> Flights</h2>
-        <h1> Cruises</h1>
-        <h1> Rental Vehicles</h1>
+        <div>
+          <Datetime initialValue={new Date()} closeOnClickOutside={true} className="text-sm appearance-none shadow border rounded py-3 px-2 text-gray-darker"/>
+          <Datetime value={new Date()} className="text-sm appearance-none shadow border rounded py-3 px-2 text-gray-darker"/>
+        </div>
+        <div>
+          <h1> Destinations</h1>
+          <Link href="/Destination"> 
+            <span className = "text-lg">
+              + Add Stop
+            </span>
+          </Link>
+          <div className ={styles.line2}></div>
+        </div>
+        <div>
+          <h2> Flights</h2>
+          <Link href="/Flight" > 
+            <span className = "text-lg">
+            + Add Flight
+            </span>
+          </Link>
+          <div className ={styles.line2}></div>
+        </div>
+        <div>
+          <h1> Cruises</h1>
+          <Link href="/Cruises" > 
+            <span className = "text-lg">
+              + Add Cruise
+            </span>
+          </Link>
+          <div className ={styles.line2}></div>
+        </div>
+        <div>
+          <h1> Rental Vehicles</h1>
+          <Link href="/Rentals" > 
+            <span className = "text-lg">
+              + Add Rental
+            </span>
+          </Link>
+          <div className ={styles.line2}></div>
+        </div>
       </div>
       <div className="flex-grow flex justify-center items-center sm:hidden">
         <div className="relative" style = {{minWidth: '100%'}}>
