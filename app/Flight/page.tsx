@@ -134,7 +134,7 @@ export default function Flights() {
           </div>
       </div>
       <div className='md:hidden'>
-        <div>
+        <div className = "pt-12 sm:pt-8">
             <h1 className='text-center'>Search For Flights!</h1>
             <div className="relative m-auto" style = {{maxWidth: '90%'}}>
               <Search placeholder="Search" />
