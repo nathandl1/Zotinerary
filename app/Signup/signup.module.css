@@ -1,0 +1,126 @@
+.leftside {
+    background-position: center;
+    max-width: 70vw;
+    position: relative;
+    display: flex;
+    height: 100vh;
+}
+
+.zotineraryBox {
+
+    border-radius: 10px;
+    background: #0064A4;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    flex-shrink: 0;
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.zotineraryBox h1 {
+    color: #FFD200;
+    font-family: 'Kadwa';
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 0%
+}
+
+.zotineraryBox h2 {
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 0%
+}
+
+.rightside {
+    background-color: #fff;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightside h1 {
+    color: #000;
+    font-family: 'Inter';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .leftside {
+        min-width: 100vw;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .zotineraryBox {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .zotineraryBox h1 {
+        font-size: 40px;
+    }
+
+    .zotineraryBox h2 {
+        font-size: 20px;
+    }
+
+    .rightside {
+        width: 50%;
+        z-index: 2;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        padding: 2%;
+    }
+
+    .rightside h1 {
+        font-size: 30px;
+    }
+
+    .continueWithButton img {
+        width: 15%;
+    }
+
+    .continueWithButton p {
+        font-size: 8px;
+    }
+
+    .error-message {
+        font-size: 12px;
+    }
+}
