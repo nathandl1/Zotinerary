@@ -1,9 +1,8 @@
 .leftside {
     background-position: center;
-    max-width: 70vw;
+    width: 80%;
     position: relative;
     display: flex;
-    height: 100vh;
 }
 
 .zotineraryBox {
@@ -75,12 +74,10 @@
 @media (max-width: 768px) {
 
     .leftside {
-        min-width: 100vw;
+        width: 100%;
         z-index: 1;
         display: flex;
         justify-content: center;
-        position: relative;
-        overflow: hidden;
     }
 
     .zotineraryBox {
@@ -99,13 +96,8 @@
     .rightside {
         width: 50%;
         z-index: 2;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        justify-content: center;
-        padding: 2%;
+        position: absolute;
+        bottom: 10px;
     }
 
     .rightside h1 {
@@ -124,3 +116,4 @@
         font-size: 12px;
     }
 }
+
