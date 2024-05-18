@@ -9,7 +9,7 @@ export default function FlightRow({airline, date, departure, destination, time, 
         <td className='border-2 border-black'>{departure}</td>
         <td className='border-2 border-black'>{destination}</td>
         <td className='border-2 border-black'>{time}</td>
-        <Link target='_blank' href={link}><td>Link</td></Link>
+        <td><Link target='_blank' href={link}>Link</Link></td>
     </tr>
   )
 }
